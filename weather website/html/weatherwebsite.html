@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../TESTweatherpage/styles/style.css">  
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">  
+    <title>WeatherTodayApp</title>
+</head>
+<body>
+    <div class="hero">
+        <div class="container_navbar">
+            <nav>
+                <a href="../HTML/weatherwebsite.html"><i class="fa-solid fa-house" href=""></i></a><br>
+                <a href="../HTML/index.html"><i class="fa-solid fa-user" ></i></a><br>
+                <i class="fa-solid fa-magnifying-glass-plus" id="searchbtn"></i><br>
+                <i class="fa-solid fa-gear" id="config"></i>
+            </nav>
+        </div>
+        <div id="searchcontainer">
+            <input id="buscarpais" type="name" maxlength="25" placeholder="Enter location...">
+            <i class="fa-brands fa-searchengin" id="search"></i>
+        </div>
+        <div id="configcontainer">
+            <h5>Theme colors</h5>
+            <i class="fa-solid fa-moon"></i>
+            <i class="lni lni-sun"></i>
+        </div>
+        <div class="main_container">
+            <i class="fa-solid fa-location-dot" id="location"></i><h2 id="citytext"></h2>
+            <label id="date" for="">Thursday, May 25</label>
+            <div class="maininfo">
+                <div class="leftside">
+                    <div id="cloudsun"><i class="fa-solid fa-cloud-sun"></i></div>
+                    <div id="sun"><i class="fa-solid fa-sun"></i></div>
+                    <div id="moon"><i class="fa-solid fa-moon"></i></div>
+                    <div id="cloud"><i class="fa-solid fa-cloud"></i></div>
+                    <div id="cloudmoon"><i class="fa-solid fa-cloud-moon"></i></div>
+                    <div id="moonrain"><i class="fa-solid fa-cloud-moon-rain"></i></div>
+                    <div id="sunrain"><i class="fa-solid fa-cloud-sun-rain"></i></div>
+                    <div id="cloudbolt"><i class="fa-solid fa-cloud-bolt"></i></div>
+                    <div id="snowflake"><i class="fa-solid fa-snowflake"></i></div>
+                    <div id="fog"><i class="fa-solid fa-smog"></i></div>
+                    <label id="temp"></label>
+                    <section class="description">
+                        <label for="" class="sky"></label>
+                    </section>
+                </div>
+                <div class="rightside">
+                    <h2 style="font-size: 25px;">Today´s details</h2>
+                    <div class="detailbox">
+                        <span>Wind:</span><br>
+                        <label id="wind">50km/h</label>
+                    </div>
+                    <div class="detailbox">
+                        <span>Humidity</span><br>
+                        <label id="humidity"></label>
+                    </div>
+                    <div class="detailbox">
+                        <span>Max:</span><br>
+                        <label id="maxtemp">30°C</label>
+                    </div>
+                    <div class="detailbox">
+                        <span>Min:</span><br>
+                        <label id="mintemp">20°C</label>
+                    </div>
+                    <div class="detailbox">
+                        <span>Feels like</span><br>
+                        <label id="termic" style="font-weight: bold; font-size: 30px"></label>
+                    </div>
+                    <div class="detailbox">
+                        <span>Time</span><br>
+                        <label id="description" style="font-size:30px; font-weight:bold;">17:30</label>
+                    </div>
+                    <div class="logo">
+                        <span id="jbp">Weather</span>
+                        <span id="coding">Today</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../TESTweatherpage/scripts/script.js"></script>
+    <script src="https://kit.fontawesome.com/d4fc36a565.js" crossorigin="anonymous"></script>
+</body>
+</html>

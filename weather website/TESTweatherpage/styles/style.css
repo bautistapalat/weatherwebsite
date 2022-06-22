@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.hero{
+    /*background-image: linear-gradient(to top, var(--color-hero2),var(--color-hero1));*/
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    /* clear morning*/
+   /* background-image: url(https://images5.alphacoders.com/784/784001.jpg);*/
+    /*night*/
+    /*background-image: url(https://i.redd.it/knvise3sljax.png);*/
+    /*clearafternoon*/
+    /*  background-image:url(../media/afternoon.jpg);*/
+    /*cloudy afternoon*/
+    /*background-image: url(https://images4.alphacoders.com/119/1195479.jpg);*/
+    /*rain*/
+    /*background-image: url(../media/rain.jpg);*/
+    /*clear day*/
+    /*background-image: url(../media/day.png);*/
+    /*foggy*/
+    /*background-image: url(../media/fog.jpg);*/
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*-----------------DEFINIENDO COLORES DE TEMAS------------------*/
+:root{
+    --color-hero1: rgb(190, 140, 0);
+    --color-hero2: rgb(199, 73, 0);
+    --color-text: rgb(255, 255, 255);
+    --color-navbar: rgb(0, 1, 39);
+}
+ /* TEMA OSCURO */
+ [tema="dark"]{
+    --color-hero: #0d0e22;
+    --color-text: white;
+    --color-navbar: rgb(20, 20, 20);
+}
+/*--------------------------------------------------------------*/
+/*------------------------navbar styles-------------------------*/
+.container_navbar{
+    height: 100vh;
+    width: 5vw;
+    background-color: rgba(95, 95, 95, 0.363);
+    box-shadow: 5px 5px 8px 2px rgba(0, 0, 0, 0.253);
+    align-items: center;
+    text-align: center;
+}
+.container_navbar nav{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 5px;
+}
+.container_navbar nav i{
+    font-size: 2vw;
+    color: white;
+    margin: 15px;
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+.container_navbar nav #config{
+    margin-top: 62vh;
+}
+.container_navbar nav i:hover{
+    transform: scale(1.4);
+    color: white;
+    margin: 15px;
+}
+/*------------section configmenu------------------------*/
+#configcontainer{
+    position: absolute;
+    bottom: 1vh;
+    width: 10vw;
+    height: 15vh;
+    margin-left: -16vw;
+    background-color: rgba(189, 189, 189, 0.164);
+    border-radius: 5px;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    box-shadow: 5px 5px 8px 2px rgba(0, 0, 0, 0.253);
+    transition: all 300ms ease;
+    z-index: 2;
+}
+#configcontainer.active{
+    margin-left: 6vw;
+}
+#configcontainer i{
+    font-size: 30px;
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+#configcontainer h5{
+    color: white;
+}
+#configcontainer i:hover{
+    font-size: 30px;
+    color: rgb(255, 255, 60);
+    margin: 10px;
+    transform: scale(1.2);
+}
+#config{
+    animation: spin-animation 3s infinite;
+}
+@keyframes spin-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+/*------------------------------------------------------*/
+/*----------------searchbar--------------------*/
+#searchcontainer{
+    height: 5vh;
+    width: 20vw;
+    background-color: rgba(189, 189, 189, 0.164);
+    box-shadow: 5px 5px 8px 2px rgba(0, 0, 0, 0.253);
+    position: absolute;
+    margin-left: -26vw;
+    bottom: 75vh;
+    border-radius: 5px;
+    padding:3px;
+    transition: all 300ms ease;
+    z-index: 2;
+}
+#searchcontainer.active{
+    margin-left: 6vw;
+}
+#searchcontainer input{
+    background-color: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    margin-left: 5px;
+}
+#searchcontainer #search{
+    color: white;
+    float: right;
+    padding: 3px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+#searchcontainer #search:hover{
+    color: #b8b8b8;
+    float: right;
+    padding: 3px;
+    font-size: 20px;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+/*---------------MAINHOME styles-------------*/
+.main_container{
+    width: 95vw;
+    margin-left: 5vw;
+    height: 100vh;
+    position: absolute;
+    top: 0vh;
+    color: var(--color-text);
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}
+.main_container #location{
+   font-size: 40px;
+   margin-right: 5px;
+   margin-top: 5px;
+   text-shadow: 0px 1px black;
+   color: rgb(212, 0, 0);
+   text-align: center;
+}
+.main_container h2{
+    font-size: 40px;
+    text-shadow: 0px 1px black;
+    text-align: center;
+}
+
+#date{
+    position: absolute;
+    margin-top: 9vh;
+    font-size: 15px;
+    text-shadow: 0px 1px black;
+}
+.maininfo{
+    width: 75vw;
+    height: 70vh;
+    background-color:rgba(95, 95, 95, 0.308);
+    position: absolute;
+    margin-top: 9%;
+    box-shadow: 5px 5px 8px 2px rgba(0, 0, 0, 0.253);
+    border-radius: 10px;
+    overflow:auto; 
+}
+
+#temp{
+    font-size: 100px;
+    text-shadow: 0px 1px black;
+}
+  
+.leftside { 
+    width: 40%; 
+    height: 100%;
+    padding: 1vw;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.171);
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+} 
+.leftside i{
+    font-size: 150px;
+    margin-top: 4vh;
+    text-shadow: 0px 1px black;
+}
+.leftside div{
+    display: none;
+}
+.leftside .active{
+    display:contents;
+}
+.rightside{
+    width: 60%;
+    height: 100%;
+    display: block;
+    padding: 10px;
+    text-shadow: 0px 1px black;
+}
+
+.leftside  { float:left;  }
+.rightside { float:right; } 
+
+.detailbox{
+    width: 25%;
+    height: 25%;
+    display:inline-block;
+    margin:3%;
+    background-color:transparent;
+    box-shadow: 5px 5px 8px 2px rgba(0, 0, 0, 0.253);
+    padding: 5px;
+}
+#wind{
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+#humidity{
+    font-size: 30px;
+    font-weight: bold;
+}
+#maxtemp{
+    font-size: 30px;
+    font-weight: bold;
+}
+#mintemp{
+    font-weight: bold;
+    font-size: 30px;
+}
+/*---------------logo styles------------------------*/
+.logo{
+    width: 20vw;
+    position: absolute;
+    padding: 1.2vh;
+    margin-left: 12vw;
+    margin-top:50px;
+}
+.logo span{
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    margin-top: 0%;
+}
+
+#jbp{
+    color: white;
+    text-shadow:black 1px 1px 1px ;
+}
+#coding{
+    color: #d43d29;
+    text-shadow:black 1px 1px;
+}
+
+/*------------------------------------------------*/
